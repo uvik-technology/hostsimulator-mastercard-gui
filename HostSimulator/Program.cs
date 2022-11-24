@@ -1,5 +1,5 @@
 ﻿
-using HostSimulatorRupay;
+using HostSimulatorMasterCard;
 using System;
 using System.Windows.Forms;
 

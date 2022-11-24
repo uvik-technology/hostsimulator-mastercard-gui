@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace HostSimulatorRupay
+namespace HostSimulatorMasterCard
 {
     public partial class MainForm : Form
     {
@@ -36,22 +36,29 @@ namespace HostSimulatorRupay
 
             connection.On("onlineRequest", (string outcome, string clearingRecords1) =>
             {
+                Console.WriteLine("shrmk, MasterCard simulator");
                 byte[] clearingRecords = System.Convert.FromBase64String(clearingRecords1);
                 if (clearingRecords != null && clearingRecords.Length != 0)
                 {
+                    Console.WriteLine("shrmk, MasterCard simulator 1");
                     ICollection<Tlv> tlvClearingRecords = Tlv.ParseTlv(clearingRecords);
                     textFinancialReq.Text = "Outcome: " + outcome + "\r\n" + string.Join("\r\n", tlvClearingRecords.Select(x => x.HexTag + " " + x.Length.ToString("X2") + " " + x.HexValue));
                 }
                 else
                 {
+                    Console.WriteLine("shrmk, MasterCard simulator 2");
                     textFinancialReq.Text = "Outcome: " + outcome;
                 }
+                Console.WriteLine("shrmk, MasterCard simulator 3");
                 string resStr = getARC() + getIAD() + getISS();
                 byte[] response = stringToByteArray(resStr);
+                Console.WriteLine("shrmk, MasterCard simulator 4");
                 if (checkFailNetwork.Checked)
                 {
+                    Console.WriteLine("shrmk, MasterCard simulator 5");
                     response = new byte[0];
                 }
+                Console.WriteLine("shrmk, MasterCard simulator 6");
                 connection.InvokeAsync("onlineResponse", response);
             });
 
@@ -94,7 +101,6 @@ namespace HostSimulatorRupay
 
         byte[] PPS_MChip1 = new byte[]
         {
-        {
             0x01,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00,
 
@@ -118,7 +124,7 @@ namespace HostSimulatorRupay
             0x9F, 0x16, 0x0F, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30,0x30, 0x31, // Merchant Identifier
             0x9f, 0x15, 0x02, 0x00, 0x01,   //MERCH
             0x9f, 0x1c, 0x08, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, //TERM ID
-            0xDF, 0x82, 0x07, 0x01, 0x00                                 // OFFLINE_CAPABILITIES
+            0xDF, 0x82, 0x07, 0x01, 0x00,                                 // OFFLINE_CAPABILITIES
 
             // Mandatory Tags
 
@@ -148,8 +154,7 @@ namespace HostSimulatorRupay
             0xDF, 0x81, 0x19, 0x01, 0x08,  //CVM Capability – No CVM Required
             0xDF, 0x81, 0x1C, 0x02, 0x00, 0x00,  //Max Lifetime of Torn Transaction Log Record
             0xDF, 0x81, 0x1D, 0x01, 0x00,  //Max Number of Torn Transaction Log Records
-            0xDF, 0x81, 0x1F, 0x01, 0x08,  //Security Capability
-
+            0xDF, 0x81, 0x1F, 0x01, 0x08  //Security Capability
         };
 
         byte[] getCurConfig()
@@ -530,6 +535,26 @@ namespace HostSimulatorRupay
             {
 
             }
+        }
+
+        private void terminalType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTransType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textFinancialConf_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     public class SRetryPolcy : IRetryPolicy

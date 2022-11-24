@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HostSimulatorRupay
+namespace HostSimulatorMasterCard
 {
     partial class MainForm
     {
@@ -106,6 +106,7 @@ namespace HostSimulatorRupay
             this.textFinancialConf.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textFinancialConf.Size = new System.Drawing.Size(356, 522);
             this.textFinancialConf.TabIndex = 0;
+            this.textFinancialConf.TextChanged += new System.EventHandler(this.textFinancialConf_TextChanged);
             // 
             // btnTxnCancel
             // 
@@ -240,10 +241,12 @@ namespace HostSimulatorRupay
             this.terminalType.Margin = new System.Windows.Forms.Padding(4);
             this.terminalType.MaxLength = 2;
             this.terminalType.Name = "terminalType";
+            this.terminalType.ReadOnly = true;
             this.terminalType.Size = new System.Drawing.Size(48, 22);
             this.terminalType.TabIndex = 71;
-            this.terminalType.Text = "91";
+            this.terminalType.Text = "22";
             this.terminalType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.terminalType.TextChanged += new System.EventHandler(this.terminalType_TextChanged);
             // 
             // label12
             // 
@@ -320,10 +323,12 @@ namespace HostSimulatorRupay
             this.textTransType.Margin = new System.Windows.Forms.Padding(4);
             this.textTransType.MaxLength = 2;
             this.textTransType.Name = "textTransType";
+            this.textTransType.ReadOnly = true;
             this.textTransType.Size = new System.Drawing.Size(48, 22);
             this.textTransType.TabIndex = 63;
             this.textTransType.Text = "00";
             this.textTransType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textTransType.TextChanged += new System.EventHandler(this.textTransType_TextChanged);
             // 
             // checkFailNetwork
             // 
@@ -345,6 +350,7 @@ namespace HostSimulatorRupay
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 61;
             this.label3.Text = "Issuer Script";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textISS
             // 
@@ -419,9 +425,7 @@ namespace HostSimulatorRupay
             this.comboConf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboConf.FormattingEnabled = true;
             this.comboConf.Items.AddRange(new object[] {
-            "PPS_MChip1"
-            });
-            
+            "PPS_MChip1"});
             this.comboConf.Location = new System.Drawing.Point(109, 121);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
