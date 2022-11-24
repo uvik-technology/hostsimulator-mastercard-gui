@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -462,7 +463,16 @@ namespace HostSimulatorMasterCard
             {
                 case "PPS_MChip1":
                     return PPS_MChip1;
-
+                case "PPS_BAL":
+                    return PPS_BAL;
+                case "PPS_BAL2":
+                    return PPS_BAL2;
+                case "PPS_CVM_2":
+                    return PPS_CVM_2;
+                case "PPS_LIMIT_1b_MasterCard":
+                    return PPS_LIMIT_1b_MasterCard;
+                case "PPS_LIMIT_1b_Maestro":
+                    return PPS_LIMIT_1b_Maestro;
                 default:
                     return PPS_MChip1;
             }
@@ -487,18 +497,31 @@ namespace HostSimulatorMasterCard
 
         String getTransType()
         {
-            string val = textTransType.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((!val.Equals("none")) && (val.Length != 0))
+            string conf = textTransType.Text;
+            string val;
+            switch (conf)
             {
-                if (!iValidHex(val, 1) || (!val.Equals("00")))
-                {
-                    MessageBox.Show("Invalid Transaction type");
-                    return "";
-                }
-                byte[] tt = { 0x9C, 0x01 };
-                return byteArrayToString(tt) + val;
+                case "Payment - 00":
+                    val = "00";
+                    break;
+                case "Cash - 01":
+                    val = "01";
+                    break;
+                case "Cashback - 09":
+                    val = "09";
+                    break;
+                case "Refund - 20":
+                    val = "20";
+                    break;
+                case "Type 88 - 88":
+                    val = "88";
+                    break;
+                default:
+                    val = "00";
+                    break;
             }
-            return "";
+            byte[] tt = { 0x9C, 0x01 };
+            return byteArrayToString(tt) + val;
         }
 
         String getTerminalType()
@@ -516,41 +539,6 @@ namespace HostSimulatorMasterCard
             }
             return "";
         }
-
-        String getOfflineOnlineOptions()
-        {
-            string conf = offlineOnlineOptions.Text;
-            byte[] options = {0xDF, 0x82, 0x07, 0x01};
-            switch (conf)
-            {
-                case "Offline Only" :
-                    return byteArrayToString(options) + "01";
-                case "Online Only" :
-                    return byteArrayToString(options) + "02";
-                case "Offline & Online":
-                    return byteArrayToString(options) + "03";
-                default :
-                    return byteArrayToString(options) + "01";
-            }
-        }
-
-
-        String getSMI()
-        {
-            string val = comboSMI.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((!val.ToLower().Equals("none")) && (val.Length != 0))
-            {
-                if (!iValidHex(val, 2))
-                {
-                    MessageBox.Show("Invalid arc value");
-                    return "";
-                }
-                byte[] tt = { 0xdf, 0x15, 0x02 };
-                return byteArrayToString(tt) + val;
-            }
-            return "";
-        }
-
 
         String getIAD()
         {
@@ -602,7 +590,6 @@ namespace HostSimulatorMasterCard
             data += byteArrayToString(Time);
             data += "9f0306000000000000";
             data += getTransType();
-            //data += getSMI();
             data += "9f40056000c02001";
             data += "df3a050040000000";
             data += "9f15020743";
@@ -610,7 +597,6 @@ namespace HostSimulatorMasterCard
             data += "9f3303004860";
             data += "df16020000";
             data += getTerminalType();
-            data += getOfflineOnlineOptions();
             connection.InvokeAsync("startTransaction", stringToByteArray(data));
         }
 
@@ -851,6 +837,16 @@ namespace HostSimulatorMasterCard
         }
 
         private void textFinancialConf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboIAD_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
