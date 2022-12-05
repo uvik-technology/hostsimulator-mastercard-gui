@@ -2761,9 +2761,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Code\\host\\mastercard\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorRupay.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Code\\host\\mastercard\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj",
       "projectName": "HostSimulatorRupay",
-      "projectPath": "C:\\Users\\LENOVO\\Code\\host\\mastercard\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorRupay.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Code\\host\\mastercard\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\LENOVO\\Code\\host\\mastercard\\hostsimulator-mastercard-gui\\HostSimulator\\obj\\",
       "projectStyle": "PackageReference",

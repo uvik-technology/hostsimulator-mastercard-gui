@@ -37,29 +37,22 @@ namespace HostSimulatorMasterCard
 
             connection.On("onlineRequest", (string outcome, string clearingRecords1) =>
             {
-                Console.WriteLine("shrmk, MasterCard simulator");
                 byte[] clearingRecords = System.Convert.FromBase64String(clearingRecords1);
                 if (clearingRecords != null && clearingRecords.Length != 0)
                 {
-                    Console.WriteLine("shrmk, MasterCard simulator 1");
                     ICollection<Tlv> tlvClearingRecords = Tlv.ParseTlv(clearingRecords);
                     textFinancialReq.Text = "Outcome: " + outcome + "\r\n" + string.Join("\r\n", tlvClearingRecords.Select(x => x.HexTag + " " + x.Length.ToString("X2") + " " + x.HexValue));
                 }
                 else
                 {
-                    Console.WriteLine("shrmk, MasterCard simulator 2");
                     textFinancialReq.Text = "Outcome: " + outcome;
                 }
-                Console.WriteLine("shrmk, MasterCard simulator 3");
                 string resStr = getARC() + getIAD() + getISS();
                 byte[] response = stringToByteArray(resStr);
-                Console.WriteLine("shrmk, MasterCard simulator 4");
                 if (checkFailNetwork.Checked)
                 {
-                    Console.WriteLine("shrmk, MasterCard simulator 5");
                     response = new byte[0];
                 }
-                Console.WriteLine("shrmk, MasterCard simulator 6");
                 connection.InvokeAsync("onlineResponse", response);
             });
 
@@ -80,15 +73,37 @@ namespace HostSimulatorMasterCard
                     byte[] result = new byte[clearingRecords.Length - 1];
                     Array.Copy(clearingRecords, 1, result, 0, clearingRecords.Length - 1);
                     ICollection<Tlv> tlvClearingRecords = Tlv.ParseTlv(result);
-                    textFinancialConf.Text = msg + "Outcome: " + outcome + "\r\n" + string.Join("\r\n", tlvClearingRecords.Select(x => x.HexTag + " " + x.Length.ToString("X2") + " " + x.HexValue));
+                    textFinancialConf.Text = textFinancialConf.Text + "\r\n" + msg + "Outcome: " + outcome + "\r\n" + string.Join("\r\n", tlvClearingRecords.Select(x => x.HexTag + " " + x.Length.ToString("X2") + " " + x.HexValue));
                 }
                 else
                 {
-                    textFinancialConf.Text = msg + "Outcome: " + outcome;
+                    textFinancialConf.Text = textFinancialConf.Text + "\r\n" + msg + "Outcome: " + outcome;
                 }
 
                 btnTxnStart.Enabled = true;
                 btnTxnCancel.Enabled = false;
+            });
+
+            connection.On("displayOutcomeParameter", (string outcomeParameter) =>
+            {
+                textFinancialConf.Text = textFinancialConf.Text + outcomeParameter;
+            });
+
+            connection.On("onUiRequest", (string uiRequestData) =>
+            {
+                uiRequestTextBox.Text = uiRequestTextBox.Text + uiRequestData;
+            });
+
+            connection.On("displayDiscretionaryData", (string discretionaryData, string errorData) =>
+            {
+                byte[] data = System.Convert.FromBase64String(discretionaryData);
+                string displayData = null;
+                if (data != null && data.Length != 0)
+                {
+                    ICollection<Tlv> tlvRecords = Tlv.ParseTlv(data);
+                    displayData = "\r\n" + "Discretionary Data: " + "\r\n" + string.Join("\r\n", tlvRecords.Select(x => x.HexTag + " " + x.Length.ToString("X2") + " " + x.HexValue));
+                    discretionaryDatatextBox1.Text = discretionaryDatatextBox1.Text + displayData + "\r\n" + "\r\n Error Indication:" + errorData;
+                }
             });
 
             connection.Closed += async (error) =>
@@ -108,9 +123,9 @@ namespace HostSimulatorMasterCard
             0x05, 0xB0, 0x12, 0x34, 0x56, 0x78, 0x00, 0x02, 0x02, 0x00,
 
 
-            0xdf, 0x82, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
-            0xdf, 0x82, 0x02, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
-            0xdf, 0x82, 0x03, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
+            0xdf, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
+            0xdf, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
+            0xdf, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
 
             0x9f, 0x1a, 0x02, 0x03, 0x56,   //Terminal country code
             0x5f, 0x2a, 0x02, 0x03, 0x56,   //Transaction currency code
@@ -135,7 +150,6 @@ namespace HostSimulatorMasterCard
             0xdf, 0x82, 0x03, 0x05, 0xA4, 0x68, 0xFC, 0x98, 0x00,
             0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
             0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
-            0x9f, 0x03, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             // 0x9c, 0x01, 0x00,
             0x9f, 0x40, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -195,7 +209,6 @@ namespace HostSimulatorMasterCard
             0xdf, 0x82, 0x03, 0x05, 0xA4, 0x68, 0xFC, 0x98, 0x00,
             0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
             0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
-            0x9f, 0x03, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             // 0x9c, 0x01, 0x00,
             0x9f, 0x40, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -255,7 +268,6 @@ namespace HostSimulatorMasterCard
             0xdf, 0x82, 0x03, 0x05, 0xA4, 0x68, 0xFC, 0x98, 0x00,
             0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
             0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
-            0x9f, 0x03, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             // 0x9c, 0x01, 0x00,
             0x9f, 0x40, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -317,7 +329,6 @@ namespace HostSimulatorMasterCard
             0xdf, 0x82, 0x03, 0x05, 0xA4, 0x68, 0xFC, 0x98, 0x00,
             0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
             0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
-            0x9f, 0x03, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             // 0x9c, 0x01, 0x00,
             0x9f, 0x40, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -377,7 +388,6 @@ namespace HostSimulatorMasterCard
             0xdf, 0x82, 0x03, 0x05, 0xA4, 0x68, 0xFC, 0x98, 0x00,
             0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
             0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
-            0x9f, 0x03, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             // 0x9c, 0x01, 0x00,
             0x9f, 0x40, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -437,7 +447,6 @@ namespace HostSimulatorMasterCard
             0xdf, 0x82, 0x03, 0x05, 0xA4, 0x68, 0xFC, 0x98, 0x00,
             0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
             0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
-            0x9f, 0x03, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             // 0x9c, 0x01, 0x00,
             0x9f, 0x40, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -590,14 +599,18 @@ namespace HostSimulatorMasterCard
             btnTxnStart.Enabled = false;
             btnTxnCancel.Enabled = true;
             string data = byteArrayToString(getCurConfig());
-            data += "9f0206" + textAmount.Text;
+
+            //Amount should Amount(9F02) + Amount Other (9F03) 
+            Int64 amount = Convert.ToInt64(textAmount.Text) + Convert.ToInt64(textOtherAmount.Text);
+            data += "9f0206" + amount.ToString().PadLeft(12, '0');
+
+            data += "9f0306" + textOtherAmount.Text;
             byte[] un = new byte[4];
             Random rnd = new Random();
             rnd.NextBytes(un);
             data += "9f3704" + byteArrayToString(un);
             data += byteArrayToString(Date);
             data += byteArrayToString(Time);
-            data += "9f0306000000000000";
             data += getTransType();
             data += "9f40056000c02001";
             data += "df3a050040000000";
@@ -856,6 +869,24 @@ namespace HostSimulatorMasterCard
         }
 
         private void comboIAD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            textFinancialConf.Text = "";
+            uiRequestTextBox.Text = "";
+            discretionaryDatatextBox1.Text = "";
+            ClearTableCheckBox.CheckState = CheckState.Unchecked;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+                
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
         {
 
         }
