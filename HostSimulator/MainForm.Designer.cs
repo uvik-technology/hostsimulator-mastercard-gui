@@ -152,22 +152,23 @@ namespace HostSimulatorMasterCard
             // 
             // textAmount
             // 
-            this.textAmount.Location = new System.Drawing.Point(137, 287);
+            this.textAmount.Location = new System.Drawing.Point(129, 214);
             this.textAmount.Margin = new System.Windows.Forms.Padding(4);
             this.textAmount.Name = "textAmount";
-            this.textAmount.Size = new System.Drawing.Size(289, 22);
+            this.textAmount.Size = new System.Drawing.Size(297, 22);
             this.textAmount.TabIndex = 3;
             this.textAmount.Text = "000000000100";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 290);
+            this.label2.Location = new System.Drawing.Point(9, 220);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Amount";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox2
             // 
@@ -256,17 +257,17 @@ namespace HostSimulatorMasterCard
             // 
             // textOtherAmount
             // 
-            this.textOtherAmount.Location = new System.Drawing.Point(137, 318);
+            this.textOtherAmount.Location = new System.Drawing.Point(129, 244);
             this.textOtherAmount.Margin = new System.Windows.Forms.Padding(4);
             this.textOtherAmount.Name = "textOtherAmount";
-            this.textOtherAmount.Size = new System.Drawing.Size(289, 22);
+            this.textOtherAmount.Size = new System.Drawing.Size(297, 22);
             this.textOtherAmount.TabIndex = 75;
             this.textOtherAmount.Text = "000000000000";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 321);
+            this.label8.Location = new System.Drawing.Point(9, 247);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 16);
@@ -282,17 +283,18 @@ namespace HostSimulatorMasterCard
             "Cashback - 09",
             "Refund - 20",
             "Type 88 - 88"});
-            this.textTransType.Location = new System.Drawing.Point(137, 221);
+            this.textTransType.Location = new System.Drawing.Point(129, 122);
             this.textTransType.Margin = new System.Windows.Forms.Padding(4);
             this.textTransType.Name = "textTransType";
-            this.textTransType.Size = new System.Drawing.Size(289, 24);
+            this.textTransType.Size = new System.Drawing.Size(167, 24);
             this.textTransType.TabIndex = 73;
             this.textTransType.Text = "Payment - 00";
+            this.textTransType.SelectedIndexChanged += new System.EventHandler(this.textTransType_SelectedIndexChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 224);
+            this.label14.Location = new System.Drawing.Point(10, 125);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 16);
@@ -302,7 +304,7 @@ namespace HostSimulatorMasterCard
             // 
             // terminalType
             // 
-            this.terminalType.Location = new System.Drawing.Point(137, 252);
+            this.terminalType.Location = new System.Drawing.Point(129, 152);
             this.terminalType.Margin = new System.Windows.Forms.Padding(4);
             this.terminalType.MaxLength = 2;
             this.terminalType.Name = "terminalType";
@@ -315,7 +317,7 @@ namespace HostSimulatorMasterCard
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 255);
+            this.label12.Location = new System.Drawing.Point(10, 153);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 16);
@@ -366,7 +368,7 @@ namespace HostSimulatorMasterCard
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 191);
+            this.label10.Location = new System.Drawing.Point(9, 325);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(29, 16);
@@ -376,7 +378,7 @@ namespace HostSimulatorMasterCard
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 158);
+            this.label9.Location = new System.Drawing.Point(8, 292);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 16);
@@ -392,7 +394,7 @@ namespace HostSimulatorMasterCard
             "01 02 03 04 80 83 40 00 00 10 00 00 00 15 00 00",
             "01 02 03 04 80 83 40 00 FF FE 00 00 00 01 00 00",
             "NONE"});
-            this.comboIAD.Location = new System.Drawing.Point(55, 187);
+            this.comboIAD.Location = new System.Drawing.Point(55, 322);
             this.comboIAD.Margin = new System.Windows.Forms.Padding(4);
             this.comboIAD.Name = "comboIAD";
             this.comboIAD.Size = new System.Drawing.Size(372, 24);
@@ -402,7 +404,7 @@ namespace HostSimulatorMasterCard
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 124);
+            this.label7.Location = new System.Drawing.Point(8, 185);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 16);
@@ -417,7 +419,7 @@ namespace HostSimulatorMasterCard
             "35 31",
             "50",
             "NONE"});
-            this.comboARC.Location = new System.Drawing.Point(55, 154);
+            this.comboARC.Location = new System.Drawing.Point(55, 284);
             this.comboARC.Margin = new System.Windows.Forms.Padding(4);
             this.comboARC.Name = "comboARC";
             this.comboARC.Size = new System.Drawing.Size(372, 24);
@@ -434,10 +436,10 @@ namespace HostSimulatorMasterCard
             "PPS_CVM_2",
             "PPS_LIMIT_1b_MasterCard",
             "PPS_LIMIT_1b_Maestro"});
-            this.comboConf.Location = new System.Drawing.Point(109, 121);
+            this.comboConf.Location = new System.Drawing.Point(129, 182);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
-            this.comboConf.Size = new System.Drawing.Size(317, 24);
+            this.comboConf.Size = new System.Drawing.Size(297, 24);
             this.comboConf.TabIndex = 50;
             this.comboConf.SelectedIndexChanged += new System.EventHandler(this.comboConf_SelectedIndexChanged);
             // 

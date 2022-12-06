@@ -922,6 +922,16 @@ namespace HostSimulatorMasterCard
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTransType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     public class SRetryPolcy : IRetryPolicy
     {
