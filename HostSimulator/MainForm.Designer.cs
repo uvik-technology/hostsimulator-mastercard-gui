@@ -431,11 +431,12 @@ namespace HostSimulatorMasterCard
             this.comboConf.FormattingEnabled = true;
             this.comboConf.Items.AddRange(new object[] {
             "PPS_MChip1",
-            "PPS_BAL",
-            "PPS_BAL2",
+            "PPS_CVM_1",
             "PPS_CVM_2",
-            "PPS_LIMIT_1b_MasterCard",
-            "PPS_LIMIT_1b_Maestro"});
+            "PPS_LIMIT_1",
+            "PPS_LIMIT_1b",
+            "PPS_LIMIT_2",
+            "PPS_LIMIT_3"});
             this.comboConf.Location = new System.Drawing.Point(129, 182);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
