@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\HostSimulator"
   ],
-  "SelectedNode": "\\HostSimulator.sln",
+  "SelectedNode": "\\HostSimulator\\MainForm.cs",
   "PreviewInSolutionExplorer": false
 }
