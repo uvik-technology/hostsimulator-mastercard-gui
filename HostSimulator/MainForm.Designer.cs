@@ -44,11 +44,11 @@ namespace HostSimulatorMasterCard
             this.buttonDecrypt = new System.Windows.Forms.Button();
             this.textBoxDec = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.terminalType = new System.Windows.Forms.ComboBox();
             this.textOtherAmount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textTransType = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.terminalType = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.checkFailNetwork = new System.Windows.Forms.CheckBox();
@@ -87,11 +87,11 @@ namespace HostSimulatorMasterCard
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textFinancialConf);
-            this.groupBox1.Location = new System.Drawing.Point(397, 15);
+            this.groupBox1.Location = new System.Drawing.Point(464, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(373, 326);
+            this.groupBox1.Size = new System.Drawing.Size(548, 326);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Transaction Confirmation";
@@ -112,7 +112,7 @@ namespace HostSimulatorMasterCard
             this.textFinancialConf.Multiline = true;
             this.textFinancialConf.Name = "textFinancialConf";
             this.textFinancialConf.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textFinancialConf.Size = new System.Drawing.Size(356, 294);
+            this.textFinancialConf.Size = new System.Drawing.Size(532, 294);
             this.textFinancialConf.TabIndex = 0;
             this.textFinancialConf.TextChanged += new System.EventHandler(this.textFinancialConf_TextChanged);
             // 
@@ -177,7 +177,7 @@ namespace HostSimulatorMasterCard
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(373, 326);
+            this.groupBox2.Size = new System.Drawing.Size(440, 326);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Financial Transaction Request";
@@ -189,7 +189,7 @@ namespace HostSimulatorMasterCard
             this.textFinancialReq.Multiline = true;
             this.textFinancialReq.Name = "textFinancialReq";
             this.textFinancialReq.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textFinancialReq.Size = new System.Drawing.Size(356, 294);
+            this.textFinancialReq.Size = new System.Drawing.Size(424, 294);
             this.textFinancialReq.TabIndex = 1;
             // 
             // buttonDecrypt
@@ -214,6 +214,7 @@ namespace HostSimulatorMasterCard
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.terminalType);
             this.groupBox3.Controls.Add(this.buttonDecrypt);
             this.groupBox3.Controls.Add(this.textBoxDec);
             this.groupBox3.Controls.Add(this.ClearTableCheckBox);
@@ -221,7 +222,6 @@ namespace HostSimulatorMasterCard
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.textTransType);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.terminalType);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.checkFailNetwork);
@@ -246,7 +246,7 @@ namespace HostSimulatorMasterCard
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.textTime);
             this.groupBox3.Controls.Add(this.textDate);
-            this.groupBox3.Location = new System.Drawing.Point(779, 15);
+            this.groupBox3.Location = new System.Drawing.Point(1020, 15);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -254,6 +254,34 @@ namespace HostSimulatorMasterCard
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Terminal";
+            // 
+            // terminalType
+            // 
+            this.terminalType.FormattingEnabled = true;
+            this.terminalType.Items.AddRange(new object[] {
+            "11 (attended online-only)",
+            "12 (Offline with online capability)",
+            "13 (offline-only)",
+            "14 (unattended online-only)",
+            "15 (Offline with online capability)",
+            "16 (offline-only)",
+            "17 (cash disbursement)",
+            "21 (online only)",
+            "22 (offline with online capability)",
+            "23 (offline only)",
+            "24 (online only)",
+            "25 (offline with online capability)",
+            "26 (offline only)",
+            "34 (online only)",
+            "35 (offline with online capability)",
+            "36 (offline only)"});
+            this.terminalType.Location = new System.Drawing.Point(130, 153);
+            this.terminalType.Margin = new System.Windows.Forms.Padding(4);
+            this.terminalType.Name = "terminalType";
+            this.terminalType.Size = new System.Drawing.Size(296, 24);
+            this.terminalType.TabIndex = 76;
+            this.terminalType.Text = "22 (offline with online capability)";
+            this.terminalType.SelectedIndexChanged += new System.EventHandler(this.terminalType_SelectedIndexChanged);
             // 
             // textOtherAmount
             // 
@@ -282,6 +310,7 @@ namespace HostSimulatorMasterCard
             "Cash - 01",
             "Cashback - 09",
             "Refund - 20",
+            "Type 17 - 17",
             "Type 88 - 88"});
             this.textTransType.Location = new System.Drawing.Point(129, 122);
             this.textTransType.Margin = new System.Windows.Forms.Padding(4);
@@ -301,18 +330,6 @@ namespace HostSimulatorMasterCard
             this.label14.TabIndex = 72;
             this.label14.Text = "Transaction Type";
             this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // terminalType
-            // 
-            this.terminalType.Location = new System.Drawing.Point(129, 152);
-            this.terminalType.Margin = new System.Windows.Forms.Padding(4);
-            this.terminalType.MaxLength = 2;
-            this.terminalType.Name = "terminalType";
-            this.terminalType.Size = new System.Drawing.Size(48, 22);
-            this.terminalType.TabIndex = 71;
-            this.terminalType.Text = "22";
-            this.terminalType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.terminalType.TextChanged += new System.EventHandler(this.terminalType_TextChanged);
             // 
             // label12
             // 
@@ -431,12 +448,15 @@ namespace HostSimulatorMasterCard
             this.comboConf.FormattingEnabled = true;
             this.comboConf.Items.AddRange(new object[] {
             "PPS_MChip1",
+            "PPS_MChip7",
             "PPS_CVM_1",
             "PPS_CVM_2",
             "PPS_LIMIT_1",
             "PPS_LIMIT_1b",
             "PPS_LIMIT_2",
-            "PPS_LIMIT_3"});
+            "PPS_LIMIT_3",
+            "PPS_RRP",
+            "PPS_RRP"});
             this.comboConf.Location = new System.Drawing.Point(129, 182);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
@@ -548,11 +568,11 @@ namespace HostSimulatorMasterCard
             // 
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.uiRequestTextBox);
-            this.groupBox4.Location = new System.Drawing.Point(397, 356);
+            this.groupBox4.Location = new System.Drawing.Point(464, 356);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(374, 362);
+            this.groupBox4.Size = new System.Drawing.Size(548, 412);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "UI Request Data";
@@ -573,8 +593,9 @@ namespace HostSimulatorMasterCard
             this.uiRequestTextBox.Multiline = true;
             this.uiRequestTextBox.Name = "uiRequestTextBox";
             this.uiRequestTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.uiRequestTextBox.Size = new System.Drawing.Size(356, 331);
+            this.uiRequestTextBox.Size = new System.Drawing.Size(532, 381);
             this.uiRequestTextBox.TabIndex = 0;
+            this.uiRequestTextBox.TextChanged += new System.EventHandler(this.uiRequestTextBox_TextChanged);
             // 
             // groupBox5
             // 
@@ -584,7 +605,7 @@ namespace HostSimulatorMasterCard
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(374, 362);
+            this.groupBox5.Size = new System.Drawing.Size(450, 412);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Discretionary Data";
@@ -606,7 +627,7 @@ namespace HostSimulatorMasterCard
             this.discretionaryDatatextBox1.Multiline = true;
             this.discretionaryDatatextBox1.Name = "discretionaryDatatextBox1";
             this.discretionaryDatatextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.discretionaryDatatextBox1.Size = new System.Drawing.Size(356, 331);
+            this.discretionaryDatatextBox1.Size = new System.Drawing.Size(434, 381);
             this.discretionaryDatatextBox1.TabIndex = 0;
             this.discretionaryDatatextBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -614,7 +635,7 @@ namespace HostSimulatorMasterCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1364, 756);
+            this.ClientSize = new System.Drawing.Size(1477, 781);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -688,7 +709,6 @@ namespace HostSimulatorMasterCard
         private System.Windows.Forms.TextBox textISS;
         private System.Windows.Forms.CheckBox checkFailNetwork;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox terminalType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox textTransType;
@@ -701,5 +721,6 @@ namespace HostSimulatorMasterCard
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox discretionaryDatatextBox1;
+        private System.Windows.Forms.ComboBox terminalType;
     }
 }
