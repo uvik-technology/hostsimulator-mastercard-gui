@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\91984\\code\\mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj": {}
+    "C:\\Users\\91984\\host_tool_mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\91984\\code\\mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj": {
+    "C:\\Users\\91984\\host_tool_mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\91984\\code\\mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj",
+        "projectUniqueName": "C:\\Users\\91984\\host_tool_mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj",
         "projectName": "HostSimulatorRupay",
-        "projectPath": "C:\\Users\\91984\\code\\mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj",
+        "projectPath": "C:\\Users\\91984\\host_tool_mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\HostSimulatorMastercard.csproj",
         "packagesPath": "C:\\Users\\91984\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\91984\\code\\mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\obj\\",
+        "outputPath": "C:\\Users\\91984\\host_tool_mc_l2\\hostsimulator-mastercard-gui\\HostSimulator\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
