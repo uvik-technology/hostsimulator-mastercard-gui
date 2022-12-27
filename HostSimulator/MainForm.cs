@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
@@ -49,10 +50,10 @@ namespace HostSimulatorMasterCard
                 }
                 string resStr = getARC() + getIAD() + getISS();
                 byte[] response = stringToByteArray(resStr);
-                if (checkFailNetwork.Checked)
-                {
-                    response = new byte[0];
-                }
+                //if (checkFailNetwork.Checked)
+                //{
+                //    response = new byte[0];
+                //}
                 connection.InvokeAsync("onlineResponse", response);
             });
 
@@ -3576,6 +3577,13 @@ namespace HostSimulatorMasterCard
         {
             string conf = textTransType.Text;
             string val;
+            if (conf.Equals("Empty"))
+            {
+                return "0x9C00";
+            } else if (conf.Equals("Absent"))
+            {
+                return "";
+            }
             switch (conf)
             {
                 case "Payment - 00":
@@ -3704,14 +3712,15 @@ namespace HostSimulatorMasterCard
 
         String getOtherAmount()
         {
-            if ((textOtherAmount.Text.Length != 2) && !iValidHex(textOtherAmount.Text, 6))
+            string otherAmtVal = textOtherAmount.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
+
+            if ((otherAmtVal.Length == 0 ) || ((!otherAmtVal.Equals("none")) && (!otherAmtVal.Equals("absent")) && !iValidHex(textOtherAmount.Text, 6)))
             {
-                MessageBox.Show("Please enter "00" for 0 Length amt or valid other amount in paise(12 digits)");
+                MessageBox.Show("Please enter \"none\" for 0 Length other amt , \"absent\" for no other amt or valid other amount in paise(12 digits)");
                 return "";
             }
 
-            string otherAmtVal = textOtherAmount.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if (otherAmtVal.Equals("none")
+            if (otherAmtVal.Equals("none"))
             {
                 return "";
 
@@ -3723,19 +3732,19 @@ namespace HostSimulatorMasterCard
             {
                 return "9f0306" + textOtherAmount.Text;
             }
-            return "";
         }
 
         String getAmount()
         {
-            if ((textAmount.Text.Length != 2) && !iValidHex(textAmount.Text, 6))
+            string amtVal = textAmount.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
+
+            if ((amtVal.Length == 0) || ((!amtVal.Equals("none")) && (!amtVal.Equals("absent")) && !iValidHex(textAmount.Text, 6)))
             {
-                MessageBox.Show("Please enter "00" for 0 Length amt or valid amount in paise(12 digits)");
+                MessageBox.Show("Please enter \"none\" for 0 Length amt, \"absent\" for no amt or valid amount in paise(12 digits)");
                 return "";
             }
 
-            string amtVal = textAmount.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if (amtVal.Equals("none")
+            if (amtVal.Equals("none"))
             {
                 return "";
 
@@ -3746,7 +3755,7 @@ namespace HostSimulatorMasterCard
             } else 
             {
                 string otherAmtVal = textOtherAmount.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-                string tempOtherAmt = ""
+                string tempOtherAmt = "";
                 if (otherAmtVal.Length != 12)
                 {
                     tempOtherAmt = "00";
@@ -3758,17 +3767,23 @@ namespace HostSimulatorMasterCard
                 }
                 //Amount should be Amount(9F02) + Amount Other (9F03) 
                 Int64 amount = Convert.ToInt64(textAmount.Text) + Convert.ToInt64(tempOtherAmt);
-                data += "9f0206" + amount.ToString().PadLeft(12, '0');
+                return "9f0206" + amount.ToString().PadLeft(12, '0');
             }
-            return "";
         }
 
         string getAccountType()
         {
             string accType = textAccTye.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((accType.Length != 2) && (!iValidHex(accType, 1)))
+            if ((accType.Length == 0) || ((!accType.Equals("none")) && (!accType.Equals("absent")) && (!iValidHex(accType, 1))))
             {
-                MessageBox.Show("Please enter valid Account Type");
+                MessageBox.Show("Please enter \"none\", \"absent\" or valid Account Type");
+                return "";
+            }
+            if (accType.Equals("none"))
+            {
+                return "5F5700";
+            } else if (accType.Equals("absent"))
+            {
                 return "";
             }
             return "5F5701" + accType;
@@ -3777,9 +3792,20 @@ namespace HostSimulatorMasterCard
         string getMerchantCustomData()
         {
             string merchCustData = textMerchCustData.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((merchCustData.Length != 40) && (!iValidHex(merchCustData, 20)))
+            if ((merchCustData.Length == 0) || ((!merchCustData.Equals("none")) && (!merchCustData.Equals("absent")) && (!iValidHex(merchCustData, 20))))
             {
-                MessageBox.Show("Please enter Merchant Custom data");
+                MessageBox.Show("Please enter \"none\", \"absent\" or valid Merchant Custom data");
+                return "";
+            }
+            if (merchCustData.Equals("none"))
+            {
+                return "9F7C1400";
+            } else if (merchCustData.Equals("absent"))
+            {
+                return "";
+            } else if (merchCustData.Length != 40)
+            {
+                MessageBox.Show("Please enter \"none\", \"absent\" or valid Merchant Custom data");
                 return "";
             }
             return "9F7C14" + merchCustData;
@@ -3788,9 +3814,17 @@ namespace HostSimulatorMasterCard
         string getTxnCategoryCode()
         {
             string categoryCode = textCategoryCode.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((categoryCode.Length != 2) && (!iValidHex(categoryCode, 1)))
+            if ((categoryCode.Length == 0) || ((!categoryCode.Equals("none")) && (!categoryCode.Equals("absent")) && (!iValidHex(categoryCode, 1))))
             {
-                MessageBox.Show("Please enter valid Category Code");
+                MessageBox.Show("Please enter \"none\", \"absent\" or valid Category code");
+                return "";
+            }
+            if (categoryCode.Equals("none"))
+            {
+                return "9F5300";
+            }
+            else if (categoryCode.Equals("absent"))
+            {
                 return "";
             }
             return "9F5301" + categoryCode;
@@ -3799,7 +3833,18 @@ namespace HostSimulatorMasterCard
         string getTxnCurrencyCode()
         {
             string currencyCode = textCurrencyCode.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((currencyCode.Length != 4) && (!iValidHex(currencyCode, 2)))
+            if ((currencyCode.Length == 0) || ((!currencyCode.Equals("none")) && (!currencyCode.Equals("absent")) && (!iValidHex(currencyCode, 2))))
+            {
+                MessageBox.Show("Please enter valid currency Code");
+                return "";
+            }
+            if (currencyCode.Equals("none"))
+            {
+                return "5F2A00";
+            } else if (currencyCode.Equals("absent"))
+            {
+                return "";
+            } else if (currencyCode.Length != 4)
             {
                 MessageBox.Show("Please enter valid currency Code");
                 return "";
@@ -3810,9 +3855,18 @@ namespace HostSimulatorMasterCard
         string getTxnCurrencyExponent()
         {
             string currencyExpo = textCurrencyExpo.Text.Replace(" ", "").Replace("\n", "").Replace("\r", "");
-            if ((currencyExpo.Length != 2) && (!iValidHex(currencyExpo, 1)))
+
+            if ((currencyExpo.Length == 0) || ((!currencyExpo.Equals("none")) && (!currencyExpo.Equals("absent")) && (!iValidHex(currencyExpo, 1))))
             {
-                MessageBox.Show("Please enter valid Category Code");
+                MessageBox.Show("Please enter \"none\", \"absent\" or valid currency exponent");
+                return "";
+            }
+            if (currencyExpo.Equals("none"))
+            {
+                return "5F3600";
+            }
+            else if (currencyExpo.Equals("absent"))
+            {
                 return "";
             }
             return "5F3601" + currencyExpo;
@@ -4142,6 +4196,46 @@ namespace HostSimulatorMasterCard
         }
 
         private void terminalType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkFailNetwork_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
