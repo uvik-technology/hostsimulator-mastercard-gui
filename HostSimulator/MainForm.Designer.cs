@@ -457,6 +457,7 @@ namespace HostSimulatorMasterCard
             "PPS_MChip8",
             "PPS_MChip9",
             "PPS_MChip10",
+            "PPS_MChip11",
             "PPS_CVM_1",
             "PPS_CVM_2",
             "PPS_LIMIT_1",
@@ -465,7 +466,24 @@ namespace HostSimulatorMasterCard
             "PPS_LIMIT_3",
             "PPS_RRP",
             "PPS_MC_ATM",
-            "PPS_MC_notATM"});
+            "PPS_MC_notATM",
+            "PPS_MC_prop",
+            "PPS_MCerrKernelConf MAG",
+            "PPS_MCnoDefault_1",
+            "PPS_MCnoDefault_2",
+            "PPS_MCnoDefault_3",
+            "PPS_MCnoDefault_4",
+            "PPS_MCnoDefault_5",
+            "PPS_MCnoMSI",
+            "PPS_MConlineonly",
+            "PPS_perf_MC",
+            "PPS_RRP2",
+            "PPS_RRP3",
+            "PPS_RRP4",
+            "PPS_RRP5",
+            "PPS_RRP6",
+            "PPS_RRP7"
+            });
             this.comboConf.Location = new System.Drawing.Point(129, 182);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
