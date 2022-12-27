@@ -448,7 +448,15 @@ namespace HostSimulatorMasterCard
             this.comboConf.FormattingEnabled = true;
             this.comboConf.Items.AddRange(new object[] {
             "PPS_MChip1",
+            "PPS_MChip2",
+            "PPS_MChip3",
+            "PPS_MChip4",
+            "PPS_MChip5",
+            "PPS_MChip6",
             "PPS_MChip7",
+            "PPS_MChip8",
+            "PPS_MChip9",
+            "PPS_MChip10",
             "PPS_CVM_1",
             "PPS_CVM_2",
             "PPS_LIMIT_1",
@@ -456,7 +464,8 @@ namespace HostSimulatorMasterCard
             "PPS_LIMIT_2",
             "PPS_LIMIT_3",
             "PPS_RRP",
-            "PPS_RRP"});
+            "PPS_MC_ATM",
+            "PPS_MC_notATM"});
             this.comboConf.Location = new System.Drawing.Point(129, 182);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
