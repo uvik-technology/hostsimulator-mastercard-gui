@@ -3722,11 +3722,11 @@ namespace HostSimulatorMasterCard
 
             if (otherAmtVal.Equals("none"))
             {
-                return "";
-
-            } else if (otherAmtVal.Length == 2)
-            {
                 return "9f0300";
+
+            } else if (otherAmtVal.Equals("absent"))
+            {
+                return "";
 
             } else 
             {
@@ -3746,11 +3746,11 @@ namespace HostSimulatorMasterCard
 
             if (amtVal.Equals("none"))
             {
-                return "";
-
-            } else if (amtVal.Length == 2)
-            {
                 return "9f0200";
+
+            } else if (amtVal.Equals("absent"))
+            {
+                return "";
 
             } else 
             {
