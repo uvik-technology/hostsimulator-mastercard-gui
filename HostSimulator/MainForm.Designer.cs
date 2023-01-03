@@ -103,7 +103,7 @@ namespace HostSimulatorMasterCard
             this.groupBox1.Size = new System.Drawing.Size(548, 326);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Transaction Confirmation";
+            this.groupBox1.Text = "Outcome Parameter Set";
             // 
             // label1
             // 
@@ -562,6 +562,7 @@ namespace HostSimulatorMasterCard
             this.comboConf.FormattingEnabled = true;
             this.comboConf.Items.AddRange(new object[] {
             "PPS_MChip1",
+            "PPS_MChip1_READ_ALL",
             "PPS_MChip2",
             "PPS_MChip3",
             "PPS_MChip4",
