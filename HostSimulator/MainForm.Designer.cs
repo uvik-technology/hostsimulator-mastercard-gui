@@ -434,6 +434,7 @@ namespace HostSimulatorMasterCard
             "Refund - 20",
             "Type 17 - 17",
             "Type 88 - 88",
+            "Type 93 - 93",
             "Empty",
             "Absent"});
             this.textTransType.Location = new System.Drawing.Point(129, 122);
@@ -597,7 +598,8 @@ namespace HostSimulatorMasterCard
             "PPS_RRP4",
             "PPS_RRP5",
             "PPS_RRP6",
-            "PPS_RRP7"});
+            "PPS_RRP7",
+            "PPS_Select1"});
             this.comboConf.Location = new System.Drawing.Point(129, 182);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
