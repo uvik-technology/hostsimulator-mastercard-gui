@@ -44,6 +44,7 @@ namespace HostSimulatorMasterCard
             this.buttonDecrypt = new System.Windows.Forms.Button();
             this.textBoxDec = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.stopButton = new System.Windows.Forms.Button();
             this.textCurrencyCode = new System.Windows.Forms.TextBox();
             this.textCurrencyExpo = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -54,12 +55,10 @@ namespace HostSimulatorMasterCard
             this.textMerchCustData = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.terminalType = new System.Windows.Forms.ComboBox();
             this.textOtherAmount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textTransType = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textISS = new System.Windows.Forms.TextBox();
@@ -203,7 +202,7 @@ namespace HostSimulatorMasterCard
             // 
             // buttonDecrypt
             // 
-            this.buttonDecrypt.Location = new System.Drawing.Point(298, 717);
+            this.buttonDecrypt.Location = new System.Drawing.Point(15, 717);
             this.buttonDecrypt.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDecrypt.Name = "buttonDecrypt";
             this.buttonDecrypt.Size = new System.Drawing.Size(128, 28);
@@ -223,6 +222,7 @@ namespace HostSimulatorMasterCard
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.stopButton);
             this.groupBox3.Controls.Add(this.textCurrencyCode);
             this.groupBox3.Controls.Add(this.textCurrencyExpo);
             this.groupBox3.Controls.Add(this.label20);
@@ -233,7 +233,6 @@ namespace HostSimulatorMasterCard
             this.groupBox3.Controls.Add(this.textMerchCustData);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.terminalType);
             this.groupBox3.Controls.Add(this.buttonDecrypt);
             this.groupBox3.Controls.Add(this.textBoxDec);
             this.groupBox3.Controls.Add(this.ClearTableCheckBox);
@@ -241,7 +240,6 @@ namespace HostSimulatorMasterCard
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.textTransType);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.textISS);
@@ -271,6 +269,17 @@ namespace HostSimulatorMasterCard
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Terminal";
+            // 
+            // stopButton
+            // 
+            this.stopButton.Location = new System.Drawing.Point(296, 717);
+            this.stopButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(128, 28);
+            this.stopButton.TabIndex = 87;
+            this.stopButton.Text = "STOP";
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // textCurrencyCode
             // 
@@ -377,34 +386,6 @@ namespace HostSimulatorMasterCard
             this.label16.Text = "Merchant Custom Data";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
-            // terminalType
-            // 
-            this.terminalType.FormattingEnabled = true;
-            this.terminalType.Items.AddRange(new object[] {
-            "11 (attended online-only)",
-            "12 (Offline with online capability)",
-            "13 (offline-only)",
-            "14 (unattended online-only)",
-            "15 (Offline with online capability)",
-            "16 (offline-only)",
-            "17 (cash disbursement)",
-            "21 (online only)",
-            "22 (offline with online capability)",
-            "23 (offline only)",
-            "24 (online only)",
-            "25 (offline with online capability)",
-            "26 (offline only)",
-            "34 (online only)",
-            "35 (offline with online capability)",
-            "36 (offline only)"});
-            this.terminalType.Location = new System.Drawing.Point(130, 153);
-            this.terminalType.Margin = new System.Windows.Forms.Padding(4);
-            this.terminalType.Name = "terminalType";
-            this.terminalType.Size = new System.Drawing.Size(296, 24);
-            this.terminalType.TabIndex = 76;
-            this.terminalType.Text = "22 (offline with online capability)";
-            this.terminalType.SelectedIndexChanged += new System.EventHandler(this.terminalType_SelectedIndexChanged);
-            // 
             // textOtherAmount
             // 
             this.textOtherAmount.Location = new System.Drawing.Point(129, 244);
@@ -435,9 +416,9 @@ namespace HostSimulatorMasterCard
             "Type 17 - 17",
             "Type 88 - 88",
             "Type 93 - 93",
-            "Empty",
+            "None",
             "Absent"});
-            this.textTransType.Location = new System.Drawing.Point(129, 122);
+            this.textTransType.Location = new System.Drawing.Point(131, 132);
             this.textTransType.Margin = new System.Windows.Forms.Padding(4);
             this.textTransType.Name = "textTransType";
             this.textTransType.Size = new System.Drawing.Size(167, 24);
@@ -448,24 +429,13 @@ namespace HostSimulatorMasterCard
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 125);
+            this.label14.Location = new System.Drawing.Point(8, 135);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 16);
             this.label14.TabIndex = 72;
             this.label14.Text = "Transaction Type";
             this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 153);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 16);
-            this.label12.TabIndex = 70;
-            this.label12.Text = "Terminal Type";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -536,7 +506,7 @@ namespace HostSimulatorMasterCard
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 185);
+            this.label7.Location = new System.Drawing.Point(12, 167);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 16);
@@ -600,7 +570,7 @@ namespace HostSimulatorMasterCard
             "PPS_RRP6",
             "PPS_RRP7",
             "PPS_Select1"});
-            this.comboConf.Location = new System.Drawing.Point(129, 182);
+            this.comboConf.Location = new System.Drawing.Point(131, 164);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
             this.comboConf.Size = new System.Drawing.Size(297, 24);
@@ -853,7 +823,6 @@ namespace HostSimulatorMasterCard
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textISS;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox textTransType;
         private System.Windows.Forms.TextBox textOtherAmount;
@@ -865,7 +834,6 @@ namespace HostSimulatorMasterCard
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox discretionaryDatatextBox1;
-        private System.Windows.Forms.ComboBox terminalType;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textAccTye;
@@ -876,5 +844,6 @@ namespace HostSimulatorMasterCard
         private System.Windows.Forms.TextBox textCurrencyExpo;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button stopButton;
     }
 }

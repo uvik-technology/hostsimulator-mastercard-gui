@@ -310,7 +310,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -726,7 +726,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -1143,7 +1143,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -1560,7 +1560,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -1977,7 +1977,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -2394,7 +2394,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -2811,7 +2811,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -3228,7 +3228,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -3648,7 +3648,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -4122,7 +4122,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -4542,7 +4542,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -4965,7 +4965,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x6F, // Length of Custom Tag
+            0x00, 0x67, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x7C, 0xD8, 0xFC, 0xF8, 0xF0,   //TAC - Online
@@ -5396,7 +5396,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x7C, 0xD8, 0xFC, 0xF8, 0xF0,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -5823,7 +5823,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x20, 0x00, 0x00, 0x00,   //TAC - Online
@@ -6250,7 +6250,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x20, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -6679,7 +6679,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x40, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -7109,7 +7109,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -7536,7 +7536,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -7969,7 +7969,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x6F, // Length of Custom Tag
+            0x00, 0x67, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x02,   //TAC - Online
@@ -8405,7 +8405,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x01,   //TAC - Online
@@ -8833,7 +8833,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x69, // Length of Custom Tag
+            0x00, 0x61, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x01,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,   //TAC - Online
@@ -9260,7 +9260,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -9677,7 +9677,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -10094,7 +10094,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -10511,7 +10511,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x03, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -10928,7 +10928,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -11174,7 +11174,7 @@ namespace HostSimulatorMasterCard
 
 
         // PPS_perf_MC
-        byte[] PPS_PPS_perf_MC_Payment = new byte[]
+        byte[] PPS_perf_MC_Payment = new byte[]
         {
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
@@ -11257,7 +11257,7 @@ namespace HostSimulatorMasterCard
             0x9f, 0x35, 0x01, 0x26               // Terminal type
         };
 
-        byte[] PPS_PPS_perf_MC_Cash = new byte[]
+        byte[] PPS_perf_MC_Cash = new byte[]
         {
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
@@ -11340,12 +11340,12 @@ namespace HostSimulatorMasterCard
             0x9f, 0x35, 0x01, 0x26               // Terminal type
         };
 
-        byte[] PPS_PPS_perf_MC_Purchase_W_CB = new byte[]
+        byte[] PPS_perf_MC_Purchase_W_CB = new byte[]
         {
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x04, 0x00, 0x80, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0xDC, 0x50, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -11423,7 +11423,7 @@ namespace HostSimulatorMasterCard
             0x9f, 0x35, 0x01, 0x26               // Terminal type
         };
 
-        byte[] PPS_PPS_perf_MC_Cash_Disbursement = new byte[]
+        byte[] PPS_perf_MC_Cash_Disbursement = new byte[]
         {
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
@@ -11506,7 +11506,7 @@ namespace HostSimulatorMasterCard
             0x9f, 0x35, 0x01, 0x26               // Terminal type
         };
 
-        byte[] PPS_PPS_perf_MC_Refund = new byte[]
+        byte[] PPS_perf_MC_Refund = new byte[]
         {
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
@@ -11762,7 +11762,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -12181,7 +12181,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -12603,7 +12603,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -13025,7 +13025,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -13447,7 +13447,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -13869,7 +13869,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -14291,7 +14291,7 @@ namespace HostSimulatorMasterCard
             0x03,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -14711,7 +14711,7 @@ namespace HostSimulatorMasterCard
             0x04,
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x17, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -14728,7 +14728,7 @@ namespace HostSimulatorMasterCard
 
             0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
             // Custom config
-            0x00, 0x65, // Length of Custom Tag
+            0x00, 0x5D, // Length of Custom Tag
             0xDF, 0x81, 0x20, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Default
             0xDF, 0x81, 0x21, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Denial
             0xDF, 0x81, 0x22, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,   //TAC - Online
@@ -15204,7 +15204,7 @@ namespace HostSimulatorMasterCard
 
                 case "PPS_MCnoDefault_2":
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_2_Payment;
-                    else if (transactionType.Equals("Cash - 01")) return PPS_MMCnoDefault_2_Cash;
+                    else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_2_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_2_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_2_Refund;
@@ -15213,7 +15213,7 @@ namespace HostSimulatorMasterCard
 
                 case "PPS_MCnoDefault_3":
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_3_Payment;
-                    else if (transactionType.Equals("Cash - 01")) return PPS_MMCnoDefault_3_Cash;
+                    else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_3_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_3_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_3_Refund;
@@ -15222,7 +15222,7 @@ namespace HostSimulatorMasterCard
 
                 case "PPS_MCnoDefault_4":
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_4_Payment;
-                    else if (transactionType.Equals("Cash - 01")) return PPS_MMCnoDefault_4_Cash;
+                    else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_4_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_4_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_4_Refund;
@@ -15231,7 +15231,7 @@ namespace HostSimulatorMasterCard
 
                 case "PPS_MCnoDefault_5":
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_2_Payment;
-                    else if (transactionType.Equals("Cash - 01")) return PPS_MMCnoDefault_2_Cash;
+                    else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_2_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_2_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_2_Refund;
@@ -15268,7 +15268,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP_Payment;
@@ -15277,7 +15277,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP2":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP2_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP2_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP2_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP2_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP2_Payment;
@@ -15286,7 +15286,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP3":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP3_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP3_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP3_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP3_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP3_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP3_Payment;
@@ -15295,7 +15295,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP4":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP4_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP4_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP4_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP4_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP4_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP4_Payment;
@@ -15304,7 +15304,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP5":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP5_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP5_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP5_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP5_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP5_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP5_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP5_Payment;
@@ -15313,7 +15313,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP6":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP6_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP6_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP6_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP6_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP6_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP6_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP6_Payment;
@@ -15322,7 +15322,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_RRP7":
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP7_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP7_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP7_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_RRP7_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_RRP7_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP7_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP7_Payment;
@@ -15331,7 +15331,7 @@ namespace HostSimulatorMasterCard
                 case "PPS_Select1":
                     if (transactionType.Equals("Payment - 00")) return PPS_Select1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Select1_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_Select1_W_CB;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_Select1_Purchase_W_CB;
                     else if (transactionType.Equals("Refund - 20")) return PPS_Select1_Cash_Disbursement;
                     else if (transactionType.Equals("Type 17 - 17")) return PPS_Select1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Select1_88;
@@ -15368,10 +15368,11 @@ namespace HostSimulatorMasterCard
         String getTransType()
         {
             string conf = textTransType.Text;
-            string val;
-            if (conf.Equals("Empty"))
+            string val; Console.WriteLine("shrmk, 1");
+            if (conf.Equals("None"))
             {
-                return "0x9C00";
+                Console.WriteLine("shrmk,2");
+                return "9C00";
             } else if (conf.Equals("Absent"))
             {
                 return "";
@@ -15404,74 +15405,6 @@ namespace HostSimulatorMasterCard
                     break;
             }
             byte[] tt = { 0x9C, 0x01 };
-            return byteArrayToString(tt) + val;
-        }
-
-        String getTerminalType()
-        {
-            string conf = terminalType.Text;
-            string val;
-            if (comboConf.Text.Equals("PPS_MChip7"))
-            {
-                return "";
-            }
-            Console.WriteLine("shrmk, terminal type...... {0:S} \n", conf);
-            switch (conf)
-            {
-                case "11 (attended online-only)":
-                    val = "11";
-                    break;
-                case "12 (Offline with online capability)":
-                    val = "12";
-                    break;
-                case "13 (offline-only)":
-                    val = "13";
-                    break;
-                case "14 (unattended online-only)":
-                    val = "14";
-                    break;
-                case "15 (Offline with online capability)":
-                    val = "15";
-                    break;
-                case "16 (offline-only)":
-                    val = "16";
-                    break;
-                case "17 (cash disbursement)":
-                    val = "17";
-                    break;
-                case "21 (online only)":
-                    val = "21";
-                    break;
-                case "22 (offline with online capability)":
-                    val = "22";
-                    break;
-                case "23 (offline only)":
-                    val = "23";
-                    break;
-                case "24 (online only)":
-                    val = "24";
-                    break;
-                case "25 (offline with online capability)":
-                    val = "25";
-                    break;
-                case "26 (offline only)":
-                    val = "26";
-                    break;
-                case "34 (online only)":
-                    val = "34";
-                    break;
-                case "35 (offline with online capability)":
-                    val = "35";
-                    break;
-                case "36 (offline only)":
-                    val = "36";
-                    break;
-                default:
-                    val = "22";
-                    break;
-            }
-
-            byte[] tt = { 0x9F, 0x35, 0x01 };
             return byteArrayToString(tt) + val;
         }
 
@@ -15695,9 +15628,7 @@ namespace HostSimulatorMasterCard
             data += "df3a050040000000";
             data += "9f15020743";
             data += "9f1c080000000000000000";
-            //data += "9f3303004860";
             data += "df16020000";
-            data += getTerminalType();
 
             Console.WriteLine("shrmk, Online response 1...... {0:D} \n", data);
 
@@ -15928,11 +15859,6 @@ namespace HostSimulatorMasterCard
             }
         }
 
-        private void terminalType_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -15991,11 +15917,6 @@ namespace HostSimulatorMasterCard
 
         }
 
-        private void terminalType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkFailNetwork_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -16034,6 +15955,11 @@ namespace HostSimulatorMasterCard
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+                
         }
     }
     public class SRetryPolcy : IRetryPolicy
