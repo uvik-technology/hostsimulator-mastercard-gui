@@ -279,6 +279,7 @@ namespace HostSimulatorMasterCard
             this.stopButton.TabIndex = 87;
             this.stopButton.Text = "STOP";
             this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Visible = false;
             this.stopButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // textCurrencyCode
