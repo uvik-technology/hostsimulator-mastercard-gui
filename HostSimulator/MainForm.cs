@@ -59,6 +59,11 @@ namespace HostSimulatorMasterCard
                 connection.InvokeAsync("onlineResponse", response);
             });
 
+            connection.On("displayRrpTime", (string rrpTime) =>
+            {
+                textFinancialReq.Text = textFinancialReq.Text + "\r\n" + "RRP Processing Time: \r\n" + rrpTime + "\r\n";
+            });
+
             connection.On("transactionConfirmation", (string outcome, string clearingRecords1) =>
             {
                 Console.WriteLine("shrmk, TC outcome...... {0:S} \n", outcome);
@@ -85,7 +90,7 @@ namespace HostSimulatorMasterCard
                     }
                     else
                     {
-                        textFinancialReq.Text = textFinancialReq.Text + "\r\n" + msg + "\n Outcome: " + outcome + "\r\n";
+                        textFinancialReq.Text = textFinancialReq.Text + "\r\n" + msg + "\r\n" + "Outcome: " + outcome + "\r\n";
                     }
 
                 } else if (clearingRecords1 != null)
@@ -8737,6 +8742,7 @@ namespace HostSimulatorMasterCard
             0xDF, 0x81, 0x1F, 0x01, 0x08,
 
             0xDF, 0x81, 0x17, 0x01, 0x00,        // Card Data Input Capability
+            0xDF, 0x81, 0x36, 0x02, 0x0F, 0xA0, // RRP Threshold Accuracy
             0xDF, 0x81, 0x1C, 0x02, 0x00, 0x00,  // Max Lifetime of Torn Transaction Log Record
             0xDF, 0x81, 0x1D, 0x01, 0x00,        // Max Number of Torn Transaction Log Records
             0xDF, 0x81, 0x1F, 0x01, 0x08        // Security Capability
@@ -15625,12 +15631,18 @@ namespace HostSimulatorMasterCard
             data += getTxnCurrencyCode();
             data += getTxnCurrencyExponent();
             byte[] un = new byte[4];
-            byte[] randomNumber = new byte[4];
+            byte[] randomNumber1 = new byte[4];
+            byte[] randomNumber2 = new byte[4];
+            byte[] randomNumber3 = new byte[4];
             Random rnd = new Random();
             rnd.NextBytes(un);
-            rnd.NextBytes(randomNumber);
+            rnd.NextBytes(randomNumber1);
+            rnd.NextBytes(randomNumber2);
+            rnd.NextBytes(randomNumber3);
             data += "9f3704" + byteArrayToString(un);
-            data += "DF6404" + byteArrayToString(randomNumber);
+            data += "DF820804" + byteArrayToString(randomNumber1);
+            data += "DF820904" + byteArrayToString(randomNumber2);
+            data += "DF820A04" + byteArrayToString(randomNumber3);
             data += byteArrayToString(Date);
             data += byteArrayToString(Time);
             data += getTransType();
