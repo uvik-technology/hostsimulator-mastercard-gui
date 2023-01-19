@@ -137,6 +137,7 @@ namespace HostSimulatorMasterCard
             };
         }
 
+        // shrmk1
         // - Payment (‘00’)
         // - Cash (‘01’)
         // - Purchase with Cashback (‘09’)
@@ -14998,7 +14999,7 @@ namespace HostSimulatorMasterCard
         {
             string conf = comboConf.Text;
             string transactionType = textTransType.Text;
-            Console.WriteLine("shrmk, 2...... {0:S} \n", conf);
+            Console.WriteLine("shrmk1, 2...... {0:S} \n", conf);
             label12.Text = conf;
 
             switch (conf)
@@ -15007,8 +15008,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip1_Payment;
                     else return PPS_MChip1_Payment;
 
@@ -15016,8 +15017,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_READ_ALL_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_READ_ALL_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_READ_ALL_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_READ_ALL_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_READ_ALL_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_READ_ALL_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_READ_ALL_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip1_READ_ALL_Payment;
                     else return PPS_MChip1_READ_ALL_Payment;
 
@@ -15025,8 +15026,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_CVM_1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_CVM_1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_CVM_1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_CVM_1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_CVM_1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_CVM_1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_CVM_1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_CVM_1_Payment;
                     else return PPS_CVM_1_Payment;
 
@@ -15034,8 +15035,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_CVM_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_CVM_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_CVM_2_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_CVM_2_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_CVM_2_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_CVM_2_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_CVM_2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_CVM_2_Payment;
                     else return PPS_CVM_2_Payment;
 
@@ -15044,8 +15045,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_1_Payment;
                     else return PPS_Limit_1_Payment;
 
@@ -15053,8 +15054,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_1b_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_1b_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_1b_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_1b_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_1b_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_1b_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_1b_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_1b_Payment;
                     else return PPS_Limit_1b_Payment;
 
@@ -15062,8 +15063,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_2_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_2_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_2_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_2_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_2_Payment;
                     else return PPS_Limit_2_Payment;
 
@@ -15071,8 +15072,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_3_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_3_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_3_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Limit_3_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_Limit_3_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_3_Payment;
                     else return PPS_Limit_3_Payment;
 
@@ -15080,8 +15081,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip2_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip2_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip2_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip2_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip2_Payment;
                     else return PPS_MChip2_Payment;   
 
@@ -15089,8 +15090,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip3_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip3_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip3_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip3_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip3_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip3_Payment;
                     else return PPS_MChip3_Payment;   
 
@@ -15098,8 +15099,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip4_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip4_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip4_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip4_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip4_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip4_Payment;
                     else return PPS_MChip4_Payment;
 
@@ -15107,8 +15108,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip5_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip5_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip5_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip5_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip5_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip5_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip5_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip5_Payment;
                     else return PPS_MChip5_Payment;
 
@@ -15116,8 +15117,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip6_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip6_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip6_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip6_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip6_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip6_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip6_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip6_Payment;
                     else return PPS_MChip6_Payment;
 
@@ -15125,8 +15126,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip7_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip7_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip7_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip7_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip7_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip7_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip7_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip7_Payment;
                     else return PPS_MChip7_Payment;
 
@@ -15134,8 +15135,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip8_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip8_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip8_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip8_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip8_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip8_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip8_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip8_Payment;
                     else return PPS_MChip8_Payment;
 
@@ -15143,8 +15144,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip9_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip9_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip9_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip9_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip9_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip9_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip9_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip9_Payment;
                     else return PPS_MChip9_Payment;
 
@@ -15152,8 +15153,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip10_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip10_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip10_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip10_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip10_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip10_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip10_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip10_Payment;
                     else return PPS_MChip10_Payment;
 
@@ -15161,8 +15162,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip11_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip11_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip11_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip11_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip11_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip11_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip11_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip11_Payment;
                     else return PPS_MChip11_Payment;
 
@@ -15170,8 +15171,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MC_ATM_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MC_ATM_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MC_ATM_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MC_ATM_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MC_ATM_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MC_ATM_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MC_ATM_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MC_ATM_Payment;
                     else if (transactionType.Equals("Type 93 - 93")) return PPS_MC_ATM_Type93;
                     else return PPS_MC_ATM_Payment;
@@ -15180,8 +15181,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MC_notATM_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MC_notATM_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MC_notATM_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MC_notATM_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MC_notATM_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MC_notATM_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MC_notATM_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MC_notATM_Payment;
                     else return PPS_MC_notATM_Payment;                
                 
@@ -15189,8 +15190,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MC_prop_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MC_prop_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MC_prop_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MC_prop_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MC_prop_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MC_prop_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MC_prop_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MC_prop_Payment;
                     else return PPS_MC_prop_Payment;    
 
@@ -15198,8 +15199,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip1_Payment;
                     else return PPS_MChip1_Payment;
                     
@@ -15207,8 +15208,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip1_Payment;
                     else return PPS_MChip1_Payment;
 
@@ -15216,8 +15217,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_2_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_2_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_2_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_2_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MCnoDefault_2_Payment;
                     else return PPS_MCnoDefault_2_Payment;
 
@@ -15225,8 +15226,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_3_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_3_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_3_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_3_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_3_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MCnoDefault_3_Payment;
                     else return PPS_MCnoDefault_3_Payment;
 
@@ -15234,8 +15235,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_4_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_4_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_4_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_4_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_4_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MCnoDefault_4_Payment;
                     else return PPS_MCnoDefault_4_Payment;
 
@@ -15243,8 +15244,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_2_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_2_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_2_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_2_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MCnoDefault_2_Payment;
                     else return PPS_MCnoDefault_2_Payment;
                     
@@ -15252,8 +15253,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoMSI_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoMSI_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoMSI_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoMSI_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoMSI_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoMSI_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoMSI_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MCnoMSI_Payment;
                     else return PPS_MCnoMSI_Payment;
 
@@ -15261,8 +15262,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MConlineonly_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MConlineonly_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MConlineonly_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MConlineonly_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MConlineonly_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MConlineonly_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MConlineonly_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MConlineonly_Payment;
                     else return PPS_MConlineonly_Payment;
 
@@ -15270,8 +15271,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_perf_MC_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_perf_MC_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_perf_MC_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_perf_MC_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_perf_MC_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_perf_MC_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_perf_MC_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_perf_MC_Payment;
                     else return PPS_perf_MC_Payment;
 
@@ -15279,8 +15280,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP_Payment;
                     else return PPS_RRP_Payment;
 
@@ -15288,8 +15289,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP2_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP2_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP2_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP2_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP2_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP2_Payment;
                     else return PPS_RRP2_Payment;
 
@@ -15297,8 +15298,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP3_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP3_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP3_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP3_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP3_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP3_Payment;
                     else return PPS_RRP3_Payment;
 
@@ -15306,8 +15307,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP4_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP4_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP4_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP4_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP4_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP4_Payment;
                     else return PPS_RRP4_Payment;
 
@@ -15315,8 +15316,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP5_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP5_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP5_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP5_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP5_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP5_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP5_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP5_Payment;
                     else return PPS_RRP5_Payment;
 
@@ -15324,8 +15325,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP6_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP6_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP6_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP6_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP6_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP6_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP6_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP6_Payment;
                     else return PPS_RRP6_Payment;
 
@@ -15333,8 +15334,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP7_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP7_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP7_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP7_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP7_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_RRP7_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_RRP7_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_RRP7_Payment;
                     else return PPS_RRP7_Payment;
 
@@ -15342,8 +15343,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_Select1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Select1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Select1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_Select1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Select1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_Select1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_Select1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Select1_88;
                     else return PPS_Select1_Payment;
 
@@ -15351,8 +15352,8 @@ namespace HostSimulatorMasterCard
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Cash_Disbursement;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Refund;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Cash_Disbursement;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Refund;
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip1_Payment;
                     else return PPS_MChip1_Payment;            
             }
