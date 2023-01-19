@@ -84,6 +84,7 @@ namespace HostSimulatorMasterCard
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.discretionaryDatatextBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -745,11 +746,22 @@ namespace HostSimulatorMasterCard
             this.discretionaryDatatextBox1.TabIndex = 0;
             this.discretionaryDatatextBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1032, 792);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 16);
+            this.label12.TabIndex = 46;
+            this.label12.Click += new System.EventHandler(this.label12_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1477, 831);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -846,5 +858,6 @@ namespace HostSimulatorMasterCard
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Label label12;
     }
 }
