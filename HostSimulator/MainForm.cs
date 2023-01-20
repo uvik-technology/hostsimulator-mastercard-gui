@@ -14816,12 +14816,13 @@ namespace HostSimulatorMasterCard
         {
             string conf = comboConf.Text;
             string transactionType = textTransType.Text;
-            Console.WriteLine("shrmk1, 2...... {0:S} \n", conf);
-            label12.Text = conf;
+            Console.WriteLine("shrmk1...... {0:S} \n", conf);
 
             switch (conf)
             {
                 case "PPS_MChip1":
+                    Console.WriteLine("shrmk2......PPS_MChip1");
+                    label12.Text = "PPS_MChip1";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
@@ -14831,6 +14832,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip1_Payment;
 
                 case "PPS_MChip1_READ_ALL":
+                    Console.WriteLine("shrmk2......PPS_MChip1_READ_ALL"); label12.Text = "PPS_MChip1_READ_ALL";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_READ_ALL_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_READ_ALL_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_READ_ALL_Purchase_W_CB;
@@ -14840,6 +14842,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip1_READ_ALL_Payment;
 
                 case "PPS_CVM_1":
+                    Console.WriteLine("shrmk2......PPS_CVM_1"); label12.Text = "PPS_CVM_1";
                     if (transactionType.Equals("Payment - 00")) return PPS_CVM_1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_CVM_1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_CVM_1_Purchase_W_CB;
@@ -14849,6 +14852,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_CVM_1_Payment;
 
                 case "PPS_CVM_2":
+                    Console.WriteLine("shrmk2......PPS_CVM_2"); label12.Text = "PPS_CVM_2";
                     if (transactionType.Equals("Payment - 00")) return PPS_CVM_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_CVM_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_CVM_2_Purchase_W_CB;
@@ -14857,8 +14861,8 @@ namespace HostSimulatorMasterCard
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_CVM_2_Payment;
                     else return PPS_CVM_2_Payment;
 
-                case "PPS_Limit_1":
-                    Console.WriteLine("shrmk, 1");
+                case "PPS_LIMIT_1":
+                    Console.WriteLine("shrmk2......PPS_LIMIT_1"); label12.Text = "PPS_LIMIT_1";
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_1_Purchase_W_CB;
@@ -14867,7 +14871,8 @@ namespace HostSimulatorMasterCard
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_1_Payment;
                     else return PPS_Limit_1_Payment;
 
-                case "PPS_Limit_1b":
+                case "PPS_LIMIT_1b":
+                    Console.WriteLine("shrmk2......PPS_LIMIT_1b"); label12.Text = "PPS_LIMIT_1b";
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_1b_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_1b_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_1b_Purchase_W_CB;
@@ -14876,7 +14881,8 @@ namespace HostSimulatorMasterCard
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_1b_Payment;
                     else return PPS_Limit_1b_Payment;
 
-                case "PPS_Limit_2":
+                case "PPS_LIMIT_2":
+                    Console.WriteLine("shrmk2......PPS_LIMIT_2"); label12.Text = "PPS_LIMIT_2";
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_2_Purchase_W_CB;
@@ -14885,7 +14891,8 @@ namespace HostSimulatorMasterCard
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_Limit_2_Payment;
                     else return PPS_Limit_2_Payment;
 
-                case "PPS_Limit_3":
+                case "PPS_LIMIT_3":
+                    Console.WriteLine("shrmk2......PPS_LIMIT_3"); label12.Text = "PPS_LIMIT_3";
                     if (transactionType.Equals("Payment - 00")) return PPS_Limit_3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Limit_3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Limit_3_Purchase_W_CB;
@@ -14895,6 +14902,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_Limit_3_Payment;
 
                 case "PPS_MChip2":
+                    Console.WriteLine("shrmk2......PPS_MChip2"); label12.Text = "PPS_MChip2";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip2_Purchase_W_CB;
@@ -14904,6 +14912,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip2_Payment;   
 
                 case "PPS_MChip3":
+                    Console.WriteLine("shrmk2......PPS_MChip3"); label12.Text = "PPS_MChip3";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip3_Purchase_W_CB;
@@ -14913,6 +14922,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip3_Payment;   
 
                 case "PPS_MChip4":
+                    Console.WriteLine("shrmk2......PPS_MChip4"); label12.Text = "PPS_MChip4";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip4_Purchase_W_CB;
@@ -14922,6 +14932,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip4_Payment;
 
                 case "PPS_MChip5":
+                    Console.WriteLine("shrmk2......PPS_MChip5"); label12.Text = "PPS_MChip5";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip5_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip5_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip5_Purchase_W_CB;
@@ -14931,6 +14942,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip5_Payment;
 
                 case "PPS_MChip6":
+                    Console.WriteLine("shrmk2......PPS_MChip6"); label12.Text = "PPS_MChip6";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip6_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip6_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip6_Purchase_W_CB;
@@ -14940,6 +14952,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip6_Payment;
 
                 case "PPS_MChip7":
+                    Console.WriteLine("shrmk2......PPS_MChip7"); label12.Text = "PPS_MChip7";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip7_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip7_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip7_Purchase_W_CB;
@@ -14949,6 +14962,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip7_Payment;
 
                 case "PPS_MChip8":
+                    Console.WriteLine("shrmk2......PPS_MChip8"); label12.Text = "PPS_MChip8";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip8_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip8_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip8_Purchase_W_CB;
@@ -14958,6 +14972,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip8_Payment;
 
                 case "PPS_MChip9":
+                    Console.WriteLine("shrmk2......PPS_MChip9"); label12.Text = "PPS_MChip9";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip9_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip9_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip9_Purchase_W_CB;
@@ -14967,6 +14982,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip9_Payment;
 
                 case "PPS_MChip10":
+                    Console.WriteLine("shrmk2......PPS_MChip10"); label12.Text = "PPS_MChip10";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip10_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip10_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip10_Purchase_W_CB;
@@ -14976,6 +14992,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip10_Payment;
 
                 case "PPS_MChip11":
+                    Console.WriteLine("shrmk2......PPS_MChip11"); label12.Text = "PPS_MChip11";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip11_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip11_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip11_Purchase_W_CB;
@@ -14985,6 +15002,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip11_Payment;
 
                 case "PPS_MC_ATM":
+                    Console.WriteLine("shrmk2......PPS_MC_ATM"); label12.Text = "PPS_MC_ATM";
                     if (transactionType.Equals("Payment - 00")) return PPS_MC_ATM_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MC_ATM_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MC_ATM_Purchase_W_CB;
@@ -14995,6 +15013,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MC_ATM_Payment;
 
                 case "PPS_MC_notATM":
+                    Console.WriteLine("shrmk2......PPS_MC_notATM"); label12.Text = "PPS_MC_notATM";
                     if (transactionType.Equals("Payment - 00")) return PPS_MC_notATM_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MC_notATM_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MC_notATM_Purchase_W_CB;
@@ -15004,6 +15023,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MC_notATM_Payment;                
                 
                 case "PPS_MC_prop":
+                    Console.WriteLine("shrmk2......PPS_MC_prop"); label12.Text = "PPS_MC_prop";
                     if (transactionType.Equals("Payment - 00")) return PPS_MC_prop_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MC_prop_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MC_prop_Purchase_W_CB;
@@ -15012,7 +15032,8 @@ namespace HostSimulatorMasterCard
                     else if (transactionType.Equals("Type 88 - 88")) return PPS_MC_prop_Payment;
                     else return PPS_MC_prop_Payment;    
 
-                case "PPS_MCerrKernelConf MAG":
+                case "PPS_MCerrKernelConf":
+                    Console.WriteLine("shrmk2......PPS_MCerrKernelConf"); label12.Text = "PPS_MCerrKernelConf";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
@@ -15022,6 +15043,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip1_Payment;
                     
                     case "PPS_MCnoDefault_1":
+                    Console.WriteLine("shrmk2......PPS_MCnoDefault_1"); label12.Text = "PPS_MCnoDefault_1";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
@@ -15031,6 +15053,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MChip1_Payment;
 
                 case "PPS_MCnoDefault_2":
+                    Console.WriteLine("shrmk2......PPS_MCnoDefault_2"); label12.Text = "PPS_MCnoDefault_2";
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_2_Purchase_W_CB;
@@ -15040,6 +15063,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MCnoDefault_2_Payment;
 
                 case "PPS_MCnoDefault_3":
+                    Console.WriteLine("shrmk2......PPS_MCnoDefault_3"); label12.Text = "PPS_MCnoDefault_3";
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_3_Purchase_W_CB;
@@ -15049,6 +15073,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MCnoDefault_3_Payment;
 
                 case "PPS_MCnoDefault_4":
+                    Console.WriteLine("shrmk2......PPS_MCnoDefault_4"); label12.Text = "PPS_MCnoDefault_4";
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_4_Purchase_W_CB;
@@ -15058,6 +15083,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MCnoDefault_4_Payment;
 
                 case "PPS_MCnoDefault_5":
+                    Console.WriteLine("shrmk2......PPS_MCnoDefault_5"); label12.Text = "PPS_MCnoDefault_5";
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_2_Purchase_W_CB;
@@ -15067,6 +15093,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MCnoDefault_2_Payment;
                     
                 case "PPS_MCnoMSI":
+                    Console.WriteLine("shrmk2......PPS_MCnoMSI"); label12.Text = "PPS_MCnoMSI";
                     if (transactionType.Equals("Payment - 00")) return PPS_MCnoMSI_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MCnoMSI_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoMSI_Purchase_W_CB;
@@ -15076,6 +15103,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MCnoMSI_Payment;
 
                 case "PPS_MConlineonly":
+                    Console.WriteLine("shrmk2......PPS_MConlineonly"); label12.Text = "PPS_MConlineonly";
                     if (transactionType.Equals("Payment - 00")) return PPS_MConlineonly_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MConlineonly_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MConlineonly_Purchase_W_CB;
@@ -15085,6 +15113,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_MConlineonly_Payment;
 
                 case "PPS_perf_MC":
+                    Console.WriteLine("shrmk2......PPS_perf_MC"); label12.Text = "PPS_perf_MC";
                     if (transactionType.Equals("Payment - 00")) return PPS_perf_MC_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_perf_MC_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_perf_MC_Purchase_W_CB;
@@ -15094,6 +15123,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_perf_MC_Payment;
 
                 case "PPS_RRP":
+                    Console.WriteLine("shrmk2......PPS_RRP"); label12.Text = "PPS_RRP";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP_Purchase_W_CB;
@@ -15103,6 +15133,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP_Payment;
 
                 case "PPS_RRP2":
+                    Console.WriteLine("shrmk2......PPS_RRP2"); label12.Text = "PPS_RRP2";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP2_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP2_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP2_Purchase_W_CB;
@@ -15112,6 +15143,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP2_Payment;
 
                 case "PPS_RRP3":
+                    Console.WriteLine("shrmk2......PPS_RRP3"); label12.Text = "PPS_RRP3";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP3_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP3_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP3_Purchase_W_CB;
@@ -15121,6 +15153,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP3_Payment;
 
                 case "PPS_RRP4":
+                    Console.WriteLine("shrmk2......PPS_RRP4"); label12.Text = "PPS_RRP4";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP4_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP4_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP4_Purchase_W_CB;
@@ -15130,6 +15163,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP4_Payment;
 
                 case "PPS_RRP5":
+                    Console.WriteLine("shrmk2......PPS_RRP5"); label12.Text = "PPS_RRP5";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP5_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP5_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP5_Purchase_W_CB;
@@ -15139,6 +15173,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP5_Payment;
 
                 case "PPS_RRP6":
+                    Console.WriteLine("shrmk2......PPS_RRP6"); label12.Text = "PPS_RRP6";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP6_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP6_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP6_Purchase_W_CB;
@@ -15148,6 +15183,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP6_Payment;
 
                 case "PPS_RRP7":
+                    Console.WriteLine("shrmk2......PPS_RRP7"); label12.Text = "PPS_RRP7";
                     if (transactionType.Equals("Payment - 00")) return PPS_RRP7_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_RRP7_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_RRP7_Purchase_W_CB;
@@ -15157,6 +15193,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_RRP7_Payment;
 
                 case "PPS_Select1":
+                    Console.WriteLine("shrmk2......PPS_Select1"); label12.Text = "PPS_Select1";
                     if (transactionType.Equals("Payment - 00")) return PPS_Select1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_Select1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_Select1_Purchase_W_CB;
@@ -15166,6 +15203,7 @@ namespace HostSimulatorMasterCard
                     else return PPS_Select1_Payment;
 
                 default:
+                    Console.WriteLine("shrmk2......default"); label12.Text = "default";
                     if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
                     else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
                     else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;

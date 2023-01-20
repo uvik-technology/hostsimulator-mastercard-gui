@@ -556,7 +556,7 @@ namespace HostSimulatorMasterCard
             "PPS_MC_ATM",
             "PPS_MC_notATM",
             "PPS_MC_prop",
-            "PPS_MCerrKernelConf MAG",
+            "PPS_MCerrKernelConf",
             "PPS_MCnoDefault_1",
             "PPS_MCnoDefault_2",
             "PPS_MCnoDefault_3",
