@@ -8977,6 +8977,48 @@ namespace HostSimulatorMasterCard
         };
 
 
+        // PPS_MCnoDefault_1
+        byte[] PPS_MCnoDefault_1_Payment = new byte[]
+        {
+            0x03,
+            0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x10, 0x10, 0x00, 0x02, 0x02, 0x00, //MasterCard AID
+            // Custom config
+            0x00, 0x0B, // Length of Custom Tag
+            0x9f, 0x1D, 0x08, 0x6C, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Terminal Risk mgmt Data
+            // Custom config
+
+            0x07, 0xA0, 0x00, 0x00, 0x00, 0x04, 0x30, 0x60, 0x00, 0x02, 0x02, 0x00, // Maestro AID
+            // Custom config
+            0x00, 0x0B, // Length of Custom Tag
+            0x9f, 0x1D, 0x08, 0x44, 0xFF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, // Terminal Risk mgmt Data
+            // Custom config
+
+            0x05, 0xB0, 0x12, 0x34, 0x56, 0x78, 0x00, 0x02, 0x02, 0x00, // Test AID
+            // Custom config
+            0x00, 0x0B, // Length of Custom Tag
+            0x9f, 0x1D, 0x08, 0x4C, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, // Terminal Risk mgmt Data
+            // Custom config
+
+            // Mandatory Tags
+            0x9F, 0x1E, 0x08, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, // Interface device serial number
+            0x9f, 0x1b, 0x04, 0x00, 0x00, 0x27, 0x10,                   //Terminal floor limit
+            0xdf, 0x4d, 0x06, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00,       //terminal cvm limit
+            0x9f, 0x7F, 0x04, 0x11, 0x55, 0x50, 0x18,                   //Unpredicatable Number
+            0x9F, 0x4E, 0x08, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x31, // Merchant Name and Location
+
+            0x9F, 0x16, 0x0F, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30,0x30, 0x31, // Merchant Identifier
+            0x9f, 0x15, 0x02, 0x00, 0x01,   //MERCH
+            0x9f, 0x1c, 0x08, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, //TERM ID
+            0xDF, 0x82, 0x07, 0x01, 0x00,                                 // OFFLINE_CAPABILITIES
+
+            0x9f, 0x1b, 0x04, 0x00, 0x00, 0x00, 0xC8,
+            0x9f, 0x66, 0x04, 0x24, 0x00, 0x40, 0x00,
+            0xdf, 0x3a, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00,
+            0x9f, 0x15, 0x02, 0x15, 0x20,
+            0xDF, 0x82, 0x05, 0x16, 0x10, 0x10, 0x01, 0x3E, 0x77, 0xD2, 0x91, 0x2D, 0x5D, 0x1B, 0xBF, 0x7F, 0x22, 0x24, 0x96, 0x61, 0x8D, 0x8E, 0x0B, 0x24, 0x4A, 0xF7,
+            0xDF, 0x81, 0x17, 0x01, 0x00,
+        };
+
 
         // PPS_MCnoDefault_2
         byte[] PPS_MCnoDefault_2_Payment = new byte[]
@@ -15044,13 +15086,13 @@ namespace HostSimulatorMasterCard
                     
                     case "PPS_MCnoDefault_1":
                     Console.WriteLine("shrmk2......PPS_MCnoDefault_1"); label12.Text = "PPS_MCnoDefault_1";
-                    if (transactionType.Equals("Payment - 00")) return PPS_MChip1_Payment;
-                    else if (transactionType.Equals("Cash - 01")) return PPS_MChip1_Cash;
-                    else if (transactionType.Equals("Cashback - 09")) return PPS_MChip1_Purchase_W_CB;
-                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MChip1_Cash_Disbursement;
-                    else if (transactionType.Equals("Refund - 20")) return PPS_MChip1_Refund;
-                    else if (transactionType.Equals("Type 88 - 88")) return PPS_MChip1_Payment;
-                    else return PPS_MChip1_Payment;
+                    if (transactionType.Equals("Payment - 00")) return PPS_MCnoDefault_1_Payment;
+                    else if (transactionType.Equals("Cash - 01")) return PPS_MCnoDefault_1_Payment;
+                    else if (transactionType.Equals("Cashback - 09")) return PPS_MCnoDefault_1_Payment;
+                    else if (transactionType.Equals("Type 17 - 17")) return PPS_MCnoDefault_1_Payment;
+                    else if (transactionType.Equals("Refund - 20")) return PPS_MCnoDefault_1_Payment;
+                    else if (transactionType.Equals("Type 88 - 88")) return PPS_MCnoDefault_1_Payment;
+                    else return PPS_MCnoDefault_1_Payment;
 
                 case "PPS_MCnoDefault_2":
                     Console.WriteLine("shrmk2......PPS_MCnoDefault_2"); label12.Text = "PPS_MCnoDefault_2";
@@ -15495,7 +15537,6 @@ namespace HostSimulatorMasterCard
             data += byteArrayToString(Date);
             data += byteArrayToString(Time);
             data += getTransType();
-            data += "9f40056000c02001";
             data += "df3a050040000000";
             data += "9f15020743";
             data += "9f1c080000000000000000";
