@@ -418,6 +418,8 @@ namespace HostSimulatorMasterCard
             "Type 17 - 17",
             "Type 88 - 88",
             "Type 93 - 93",
+            "Type 12 - 12",
+            "Type 21 - 21",
             "None",
             "Absent"});
             this.textTransType.Location = new System.Drawing.Point(131, 132);
