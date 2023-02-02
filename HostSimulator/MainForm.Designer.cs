@@ -573,7 +573,8 @@ namespace HostSimulatorMasterCard
             "PPS_RRP5",
             "PPS_RRP6",
             "PPS_RRP7",
-            "PPS_Select1"});
+            "PPS_Select1",
+            "PPS_TrxTypeOther"});
             this.comboConf.Location = new System.Drawing.Point(131, 164);
             this.comboConf.Margin = new System.Windows.Forms.Padding(4);
             this.comboConf.Name = "comboConf";
